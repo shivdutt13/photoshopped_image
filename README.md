@@ -10,6 +10,7 @@ Python code to determine whether an image is photoshopped or not
 6. Please note that my script also gives a confidence interval/rating on whether an image is photoshopped or not - it doesn't just say yes/no.
 7. Usage is: python error_level_analysis_v3.py --dir <directory that contains image> --fname <image_name>
 
+**Sample Outputs:**
 8. Sample output (for photoshopped image): 
 [shiv@chef:~/python_scripts]$ python error_level_analysis_v3.py --dir "/home/shiv/" --fname "zane-lee-LvVw6wRmGAM-unsplash.jpg"
 In the main function
@@ -60,5 +61,10 @@ Writing the JSON payload of the original image to file jayson_payload.txt
 [shiv@chef:~/python_scripts]$
 
 
-
-
+**Additional Details:**
+10. If I had additional days to work on this problem, what I would do: 
+-- I would run the script over many more (thousands or more) of photoshopped and non-photoshopped images to get more strict/accurate values for the max_diff thresholds and more precise confidence intervals
+-- I would include functions that use other techniques, such as the average color composition 
+(see for exmaple: https://www.reddit.com/r/computervision/comments/5ivbI would cd/is_there_a_way_to_tell_if_an_image_has_been/)
+-- I would check the metadata in the file to see if it gives any indication of manipulation using photoshop 
+-- I would check areas of the image that are likely to have not been manipulated correctly (such as shadows, which I could find by looking at darker spots)
