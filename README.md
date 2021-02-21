@@ -62,9 +62,13 @@ Writing the JSON payload of the original image to file jayson_payload.txt
 
 
 **Additional Details:**
+
 10. If I had additional days to work on this problem, what I would do: 
 -- I would run the script over many more (thousands or more) of photoshopped and non-photoshopped images to get more strict/accurate values for the max_diff thresholds and more precise confidence intervals
 -- I would include functions that use other techniques, such as the average color composition 
 (see for exmaple: https://www.reddit.com/r/computervision/comments/5ivbI would cd/is_there_a_way_to_tell_if_an_image_has_been/)
 -- I would check the metadata in the file to see if it gives any indication of manipulation using photoshop 
 -- I would check areas of the image that are likely to have not been manipulated correctly (such as shadows, which I could find by looking at darker spots)
+
+11. The solution should scale without much issue. 
+If we have many files to analyze (say millions or more), then we would likely have to use some sort of multi-threading. 
